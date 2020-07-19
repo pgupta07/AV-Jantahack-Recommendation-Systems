@@ -23,10 +23,11 @@ train.csv: It contains the set of 13 challenges that were attempted by the same 
 challenge_data.csv: Contains attributes related to each challenge <br />
 test.csv: Contains the first 10 challenges solved by a new user set (not in train) in the test set. We need to predict <br />
 
-##Solution
-We used CPT(Compact Prediction Tree) Machine Learning Model to acheive this task.
-Best result with below combination-
-        k = 5, n=3 
-        where,
-        k is the number of last elements that will be used to find similar sequences and,
-        n is the number of predictions required.
+## Solution
+We used CPT(Compact Prediction Tree) Machine Learning Model to acheive this task.<br/>
+
+Best result with below combination-<br/>
+        k = 5, n=3 <br/>
+        where,<br/>
+        k is the number of last elements that will be used to find similar sequences and,<br/>
+        n is the number of predictions required.<br/>
