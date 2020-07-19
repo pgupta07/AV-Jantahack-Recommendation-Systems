@@ -24,7 +24,7 @@ challenge_data.csv: Contains attributes related to each challenge <br />
 test.csv: Contains the first 10 challenges solved by a new user set (not in train) in the test set. We need to predict <br />
 
 ## Solution:
-We used CPT(Compact Prediction Tree) alogorithm to Predict the Output.<br/>
+We used CPT(Compact Prediction Tree) alogorithm to Train the model and Predict the Output.<br/>
 Best Result-<br/>
       k = 5 and n = 3<br/>
       k is the number of last elements that will be used to find similar sequences and,<br/>
