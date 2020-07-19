@@ -1,33 +1,35 @@
-# CPT (Compact Prediction Tree)
+# AV-Jantahack-Recommendation-system
+Approach to "Analytics Vidhya Janatahack: Recommendation system"
 
-This is the Python Implementation of CPT algorithm for Sequence Prediction. The library has been written from scratch in Python and as far as I believe is the first Python implementation of the algorithm.
+Hosted at: https://datahack.analyticsvidhya.com/contest/janatahack-recommendation-systems/#ProblemStatement
 
-The repository is also an exercise on my part to code a research paper. The library is not perfect. I have intentionally left out some optimisations such as CFS(compression of frequenct sequences) etc. These features will be later added to the library as an ongoing effort.
+Rank: 52 from 12,064 registered participant.
 
-The library is created using the below two research papers.
+Solution available in jupyter notebook form.
 
-1. [Compact Prediction Tree: A Losless Model for Accurate Sequence Prediction](http://www.philippe-fournier-viger.com/spmf/ADMA2013_Compact_Prediction_tree) 
+## Problem Statement:
 
-2. [CPT+: Decreasing the time/space complexity of the Compact Prediction Tree](https://pdfs.semanticscholar.org/bd00/0fe7e222b8095c6591291cd7bef18f970ab7.pdf)
+Your client is a fast-growing mobile platform, for hosting coding challenges. They have a unique business model, where they crowdsource problems from various creators(authors). These authors create the problem and release it on the client's platform. The users then select the challenges they want to solve. The authors make money based on the level of difficulty of their problems and how many users take up their challenge.
 
+The client, on the other hand makes money when the users can find challenges of their interest and continue to stay on the platform. Till date, the client has relied on its domain expertise, user interface and experience with user behaviour to suggest the problems a user might be interested in. You have now been appointed as the data scientist who needs to come up with the algorithm to keep the users engaged on the platform.
 
-- How to use the library?
+The client has provided you with history of last 10 challenges the user has solved, and you need to predict which might be the next 3 challenges the user might be interested to solve. Apply your data science skills to help the client make a big mark in their user engagements/revenue.
 
-There is no requirement of compiling anything but make sure you have Pandas and tqdm installed in your environment specific versions of which are mentioned in the file requirements.txt.
+## Data Description
 
-- Sample code for training and getting predictions.
+There are three files:
 
-~~~
+train.csv: It contains the set of 13 challenges that were attempted by the same user in a sequence. <br />
+challenge_data.csv: Contains attributes related to each challenge <br />
+test.csv: Contains the first 10 challenges solved by a new user set (not in train) in the test set. We need to predict <br />
 
-model = CPT()
-
-data, target = model.load_files("train.csv","test.csv")
-
-model.train(data)
-
-predictions = model.predict(data,target, k, n)
-
-~~~
+## Solution:
+We used CPT(Compact Prediction Tree) alogorithm to Predict the Output.<br/>
+Best Result-<br/>
+      k = 5 and n = 3<br/>
+      k is the number of last elements that will be used to find similar sequences and,<br/>
+      n is the number of predictions required.<br/>
+      
 
 
 
